@@ -1,3 +1,8 @@
 terraform init
 terraform plan -var-file=aws-SE-99d097-databricks/us-east-1/terraform-aws-vpc.auto.tfvars
 terraform apply -auto-approve -var-file=aws-SE-99d097-databricks/us-east-1/terraform-aws-vpc.auto.tfvars
+
+vpc_endpoints = {
+  dataplane_relay = "vpce-0b867350857021b02"
+  rest_api        = "vpce-07ead0b0b480d8286"
+}
