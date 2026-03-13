@@ -1,4 +1,5 @@
-# Root module: AWS Route Table
+# Root module: AWS Route Table for Databricks Workspace
+# Reference: databricks/terraform-databricks-sra - network.tf
 
 resource "aws_route_table" "this" {
   vpc_id = var.vpc_id

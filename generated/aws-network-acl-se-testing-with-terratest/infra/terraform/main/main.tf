@@ -1,4 +1,5 @@
 # Root module: AWS Network ACL
+# Reference: databricks/terraform-databricks-sra - network.tf
 
 resource "aws_network_acl" "this" {
   vpc_id = var.vpc_id

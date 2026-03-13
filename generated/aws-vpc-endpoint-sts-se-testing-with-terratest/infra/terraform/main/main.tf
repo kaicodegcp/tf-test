@@ -1,4 +1,5 @@
 # Root module: AWS VPC Endpoint for STS (Interface)
+# Reference: databricks/terraform-databricks-sra - privatelink.tf
 
 resource "aws_vpc_endpoint" "sts" {
   vpc_id              = var.vpc_id
