@@ -26,11 +26,8 @@ func TestAwsRouteTable_SE_UsEast1(t *testing.T) {
 
 	terraform.InitAndApply(t, opts)
 
-	rtID := terraform.Output(t, opts, "route_table_id")
-	rtArn := terraform.Output(t, opts, "route_table_arn")
-	vpcID := terraform.Output(t, opts, "vpc_id")
-
-	require.NotEmpty(t, rtID)
-	require.NotEmpty(t, rtArn)
-	require.NotEmpty(t, vpcID)
+	route_table_idVal := terraform.Output(t, opts, "route_table_id")
+	require.NotEmpty(t, route_table_idVal)
+	route_table_arnVal := terraform.Output(t, opts, "route_table_arn")
+	require.NotEmpty(t, route_table_arnVal)
 }

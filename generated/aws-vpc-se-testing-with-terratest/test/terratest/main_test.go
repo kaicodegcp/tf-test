@@ -26,11 +26,10 @@ func TestAwsVpc_SE_UsEast1(t *testing.T) {
 
 	terraform.InitAndApply(t, opts)
 
-	vpcID := terraform.Output(t, opts, "vpc_id")
-	vpcArn := terraform.Output(t, opts, "vpc_arn")
-	vpcCidrBlock := terraform.Output(t, opts, "vpc_cidr_block")
-
-	require.NotEmpty(t, vpcID)
-	require.NotEmpty(t, vpcArn)
-	require.NotEmpty(t, vpcCidrBlock)
+	vpc_idVal := terraform.Output(t, opts, "vpc_id")
+	require.NotEmpty(t, vpc_idVal)
+	vpc_arnVal := terraform.Output(t, opts, "vpc_arn")
+	require.NotEmpty(t, vpc_arnVal)
+	vpc_cidr_blockVal := terraform.Output(t, opts, "vpc_cidr_block")
+	require.NotEmpty(t, vpc_cidr_blockVal)
 }

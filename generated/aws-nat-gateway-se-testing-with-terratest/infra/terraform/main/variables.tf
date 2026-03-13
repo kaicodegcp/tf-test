@@ -14,6 +14,6 @@ variable "resource_prefix" {
 }
 
 variable "subnet_id" {
-  description = "Subnet ID where the NAT Gateway will be placed."
+  description = "Public subnet ID for the NAT Gateway."
   type        = string
 }

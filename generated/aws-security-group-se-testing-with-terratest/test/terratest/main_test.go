@@ -26,11 +26,10 @@ func TestAwsSecurityGroup_SE_UsEast1(t *testing.T) {
 
 	terraform.InitAndApply(t, opts)
 
-	sgID := terraform.Output(t, opts, "security_group_id")
-	sgArn := terraform.Output(t, opts, "security_group_arn")
-	sgName := terraform.Output(t, opts, "security_group_name")
-
-	require.NotEmpty(t, sgID)
-	require.NotEmpty(t, sgArn)
-	require.NotEmpty(t, sgName)
+	security_group_idVal := terraform.Output(t, opts, "security_group_id")
+	require.NotEmpty(t, security_group_idVal)
+	security_group_arnVal := terraform.Output(t, opts, "security_group_arn")
+	require.NotEmpty(t, security_group_arnVal)
+	security_group_nameVal := terraform.Output(t, opts, "security_group_name")
+	require.NotEmpty(t, security_group_nameVal)
 }
