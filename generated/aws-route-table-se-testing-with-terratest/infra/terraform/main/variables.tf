@@ -17,9 +17,3 @@ variable "vpc_id" {
   description = "VPC ID for the route table."
   type        = string
 }
-
-variable "subnet_ids" {
-  description = "List of subnet IDs to associate with the route table."
-  type        = list(string)
-  default     = []
-}

@@ -1,5 +1,4 @@
-# Root module: AWS NAT Gateway for Databricks Workspace
-# Reference: databricks/terraform-databricks-sra - network.tf
+# Root module: AWS NAT Gateway
 
 resource "aws_eip" "this" {
   domain = "vpc"

@@ -4,16 +4,11 @@ output "nat_gateway_id" {
 }
 
 output "nat_gateway_public_ip" {
-  description = "The public IP address of the NAT Gateway."
+  description = "The public IP of the NAT Gateway."
   value       = aws_nat_gateway.this.public_ip
 }
 
-output "eip_allocation_id" {
-  description = "The allocation ID of the Elastic IP."
+output "eip_id" {
+  description = "The Elastic IP allocation ID."
   value       = aws_eip.this.id
-}
-
-output "eip_public_ip" {
-  description = "The public IP address of the Elastic IP."
-  value       = aws_eip.this.public_ip
 }

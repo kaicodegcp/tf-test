@@ -1,0 +1,5 @@
+aws_region      = "us-east-1"
+environment     = "se"
+resource_prefix = "tf-test"
+subnet_id       = "subnet-PLACEHOLDER"
+route_table_id  = "rtb-PLACEHOLDER"
