@@ -1,1 +1,3 @@
-ts
+terraform init
+terraform plan -var-file=aws-SE-99d097-databricks/us-east-1/terraform-aws-vpc.auto.tfvars
+terraform apply -auto-approve -var-file=aws-SE-99d097-databricks/us-east-1/terraform-aws-vpc.auto.tfvars
