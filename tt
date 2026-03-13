@@ -13,7 +13,8 @@ subnet_ids = [
 ]
 
 security_group_ids = [
-  "dbxsra-sk-workspace-sg"
+  "sg-05dde1a180fc09b7d",
+  "sg-0b6424fb908d79f86"
 ]
 
 vpc_endpoints = {
