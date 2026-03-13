@@ -12,8 +12,3 @@ output "security_group_name" {
   description = "The name of the security group."
   value       = aws_security_group.this.name
 }
-
-output "vpc_id" {
-  description = "The VPC ID of the security group."
-  value       = aws_security_group.this.vpc_id
-}
