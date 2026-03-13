@@ -21,3 +21,52 @@ vpc_endpoints = {
   dataplane_relay = ["vpce-0b867350857021b02"]
   rest_api        = ["vpce-07ead0b0b480d8286"]
 }
+
+
+variable "dataplane_relay_vpce" {
+  description = "Databricks dataplane relay endpoint"
+  type        = list(string)
+}
+
+variable "rest_api_vpce" {
+  description = "Databricks REST API endpoint"
+  type        = list(string)
+}
+
+resource "databricks_mws_networks" "this" {
+  account_id   = var.account_id
+  network_name = var.network_name
+  vpc_id       = var.vpc_id
+
+  subnet_ids = var.subnet_ids
+
+  security_group_ids = var.security_group_ids
+
+  vpc_endpoints {
+    dataplane_relay = var.dataplane_relay_vpce
+    rest_api        = var.rest_api_vpce
+  }
+}
+
+account_id   = "040c96cc-25ed-4432-b163-f62ece5e411c"
+network_name = "se-us-east-1-network"
+
+vpc_id = "vpc-01f495c23277309ea"
+
+subnet_ids = [
+  "subnet-01a001832fb93959b",
+  "subnet-0862b4fb4c044b35a",
+  "subnet-0319090d4ae8afc08"
+]
+
+security_group_ids = [
+  "sg-05dde1a180fc09b7d"
+]
+
+dataplane_relay_vpce = [
+  "vpce-0b867350857021b02"
+]
+
+rest_api_vpce = [
+  "vpce-07ead0b0b480d8286"
+]
