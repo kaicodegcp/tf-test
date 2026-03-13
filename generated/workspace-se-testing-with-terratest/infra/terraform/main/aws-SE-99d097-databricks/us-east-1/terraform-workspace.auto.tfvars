@@ -1,0 +1,10 @@
+# Mandatory
+databricks_account_id    = "PLACEHOLDER"
+workspace_name           = "se-test-workspace"
+aws_region               = "us-east-1"
+credentials_id           = "PLACEHOLDER"
+storage_configuration_id = "PLACEHOLDER"
+network_id               = "PLACEHOLDER"
+
+# Notes:
+# - Databricks account credentials must be provided via env vars (see repo README).

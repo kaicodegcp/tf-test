@@ -27,10 +27,6 @@ resource "aws_subnet" "private" {
   }
 }
 
-data "aws_availability_zones" "available" {
-  state = "available"
-}
-
 # Security Group
 resource "aws_security_group" "this" {
   name        = "${var.resource_prefix}-workspace-sg"

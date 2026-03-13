@@ -1,4 +1,5 @@
 # Root module: AWS Public Subnet
+# Reference: databricks/terraform-databricks-sra - network.tf
 
 resource "aws_subnet" "public" {
   vpc_id                  = var.vpc_id
