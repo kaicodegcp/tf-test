@@ -14,8 +14,7 @@ subnet_ids = [
 ]
 
 security_group_ids = [
-  "sg-05dde1a180fc09b7d",
-  "sg-0b6424fb908d79f86"
+  "sg-05dde1a180fc09b7d"
 ]
 
 vpc_endpoints = {
