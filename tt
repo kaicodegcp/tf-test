@@ -2,6 +2,19 @@ terraform init
 terraform plan -var-file=aws-SE-99d097-databricks/us-east-1/terraform-aws-vpc.auto.tfvars
 terraform apply -auto-approve -var-file=aws-SE-99d097-databricks/us-east-1/terraform-aws-vpc.auto.tfvars
 
+account_id        = "040c96cc-25ed-4432-b163-f62ece5e411c"
+network_name      = "se-us-east-1-network"
+vpc_id            = "vpc-01f495c23277309ea"
+
+subnet_ids = [
+  "subnet-01a001832fb93959b",
+  "subnet-0862b4fb4c044b35a"
+]
+
+security_group_ids = [
+  "dbxsra-sk-workspace-sg"
+]
+
 vpc_endpoints = {
   dataplane_relay = "vpce-0b867350857021b02"
   rest_api        = "vpce-07ead0b0b480d8286"
